@@ -57,10 +57,10 @@
   .arc-svg{ width:100%; height: 118px; display:block; }
   .arc-labels-abs{ position:relative; height:46px; margin-top:2px; }
   .arc-label-abs{ position:absolute; top:0; transform:translateX(-50%); text-align:center; font-size:11.5px;
-    color: var(--text-dim); cursor:pointer; user-select:none; white-space:nowrap; }
-  .arc-label-abs .nm{ display:block; font-weight:500; }
+    color: var(--text-dim); cursor:pointer; user-select:none; white-space:nowrap; max-width:72px; overflow:hidden; }
+  .arc-label-abs .nm{ display:block; font-weight:500; overflow:hidden; text-overflow:ellipsis; }
   .arc-label-abs .tk{ display:block; font-size: 9px; margin-top:1px; opacity:.7; }
-  .arc-label-abs .st{ display:block; font-size: 9px; margin-top:2px; font-weight:600; }
+  .arc-label-abs .st{ display:block; font-size: 8px; margin-top:2px; font-weight:600; overflow:hidden; text-overflow:ellipsis; }
   .arc-hint{ text-align:center; font-size:11px; color: var(--text-faint); margin-top:8px; }
 
   .cat-rings-card{ margin-top: 12px; background: linear-gradient(180deg, var(--bg-soft) 0%, var(--card) 100%);
@@ -376,11 +376,11 @@
   const MILESTONES = [3,7,14,21,30,60,90];
   const PRAYER_IDS = ['fajr','dhuhr','asr','maghrib','isha'];
   const ARC_POINTS = {
-    fajr:    { x:0.05, elevation: 0.02,  tk:'Dawn' },
-    dhuhr:   { x:0.42, elevation: 1.00,  tk:'Noon' },
-    asr:     { x:0.64, elevation: 0.55,  tk:'Afternoon' },
-    maghrib: { x:0.86, elevation: 0.05,  tk:'Sunset' },
-    isha:    { x:0.97, elevation: -0.20, tk:'Night' },
+    fajr:    { x:0.04, elevation: 0.02,  tk:'Dawn' },
+    dhuhr:   { x:0.32, elevation: 1.00,  tk:'Noon' },
+    asr:     { x:0.57, elevation: 0.55,  tk:'Afternoon' },
+    maghrib: { x:0.79, elevation: 0.05,  tk:'Sunset' },
+    isha:    { x:0.98, elevation: -0.20, tk:'Night' },
   };
   const STATUSES = [
     { key:'jamaat_sunnat', label:'Jamaat + Sunnah', hex:'#d7b072' },
